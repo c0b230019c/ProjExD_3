@@ -156,6 +156,8 @@ class Score:
     def update(self, screen, count=0):
         """
         スコアを表示するメソッド
+        爆弾を1つ消すごとにスコアを1カウントアップ
+        引数: screen ,count(初期値0)
         """
         self.score += count
         self.img = self.fonto.render(f"スコア:{self.score}", 0, (0, 0, 255))
